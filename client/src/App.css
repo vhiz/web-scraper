@@ -1,0 +1,183 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 768px) {
+    padding: 0px;
+    display: block;
+  }
+}
+
+section {
+  width: 60vw;
+  height: 60vh;
+  padding: 6px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 60vh;
+    padding: 6px;
+  }
+  .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0));
+
+    .inputContainer {
+      display: flex;
+      width: 80%;
+      border: 1px solid gray;
+      border-radius: 10px;
+      background-color: antiquewhite;
+      color: black;
+      height: 3rem;
+      input {
+        color: black;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        flex: 1;
+        height: 100%;
+        font-size: 1rem;
+      }
+      button {
+        height: 100%;
+        width: 10%;
+        cursor: pointer;
+        border: none;
+        @media (max-width: 768px) {
+          width: 30%;
+        }
+      }
+    }
+  }
+  .items {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 5rem;
+  }
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  padding: 2px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .imgContainer {
+    overflow: hidden;
+    width: 50%;
+    border-radius: 10px;
+    height: 10rem;
+    background: #00000021;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  span {
+    width: 50%;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 600;
+  }
+}
+
+.filter {
+  margin-top: 10px;
+  padding: 10px;
+  width: 60vw;
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  input,
+  select {
+    color: black;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    flex: 1;
+    height: 100%;
+    font-size: 1rem;
+    border-right: 1px solid gray;
+  }
+  button {
+    width: 4rem;
+    height: 2rem;
+  }
+  @media (max-width: 877px) {
+    input,
+    select {
+      width: 100%;
+      border-bottom: 1px solid gray;
+      padding: 10px;
+      border-right: 0;
+    }
+    button {
+      width: 100%;
+      margin-top: 2px;
+    }
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.pagination {
+  display: flex;
+  margin-top: 20px;
+  width: 60vw;
+  border-right: 0;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  span {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid gray;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .active {
+    background-color: #007bff;
+    color: white;
+  }
+}
+
+.pagContainer {
+  @media (max-width: 877px) {
+    padding-bottom: 2rem;
+  }
+}
