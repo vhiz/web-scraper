@@ -18,7 +18,7 @@ export default function App() {
     async function fetchData() {
       try {
         setLoading(true);
-        const res = await axios.post("http://localhost:3000", {
+        const res = await axios.post("https://web-scraper-gxag.onrender.com/", {
           url: url || "https://www.jumia.com.ng",
         });
         if (res.data?.message) {
